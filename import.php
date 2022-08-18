@@ -47,7 +47,7 @@ function xml_import1( $file, $file_log ) {
 	}
 
 	// for each row
-	$content = utf8_encode(file_get_contents($file));
+	$content = utf8_encode(file_get_contents($file));  // codifica UTF-8 gia presente in js con l import
 	$xml = simplexml_load_string($content);
 	foreach( $xml->MeterData as $row ) {
 
